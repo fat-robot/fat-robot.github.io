@@ -1,7 +1,179 @@
 ---
 layout: default
 ---
-<div class="post">
+
+{% include header.html %}
+
+<div class="top-title-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="page-info">
+          <h1 class="h1-page-title">{{ page.title }}</h1>
+	  
+          <!-- BreadCrumb -->
+          <div class="breadcrumb-container">
+            <ol class="breadcrumb">
+              <li>
+                <a href="{{ site.baseurl }}/index.html">Home</a>
+              </li>
+              <li class="active">Blog</li>
+            </ol>
+          </div>
+          <!-- BreadCrumb -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div><!--.top wrapper end -->
+
+<div class="content-wrapper"><div class="body-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-sm-9">
+
+
+                                <!-- Blog Post -->
+                                <div class="blog-post">
+
+                                    <div class="blog-post-type">
+                                        <i class="icon-pen"> </i>
+                                    </div>
+
+                                    <div class="blog-span">
+                                        <div class="blog-post-featured-img img-overlay">
+                                            <img src="images/placeholders/blog1.jpg" alt="" class="img-responsive"/>
+
+                                            <div class="item-img-overlay">
+                                                <a class="portfolio-zoom fa fa-plus" href="images/placeholders/blog1.jpg"
+                                                   data-rel="prettyPhoto[portfolio]" title="Title goes here"></a>                    
+                                                <div class="item_img_overlay_content">
+                                                    <div class="blog-post-details-item blog-post-details-item-left share-article">
+                                                        <span>Share It On</span>
+                                                        <a href="#" class="icon-facebook"></a>
+                                                        <a href="#" class="icon-twitter-alt"></a>
+                                                        <a href="#" class="icon-google"></a>
+                                                        <a href="#" class="icon-email-mail-streamline"></a>
+                                                    </div>                        
+                                                    <div class="blog-post-details-item blog-post-details-item-right share-article">
+                                                        <a href="#" class="icon-heart">25</a>
+                                                    </div>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h2>
+                                            {{ page.title }}
+                                        </h2>
+
+                                        <div class="blog-post-body">
+                                            {{ content }}
+                                        </div>
+
+                                        <div class="blog-post-details">
+
+					  <!-- Date -->
+                                            <div class="blog-post-details-item blog-post-details-item-left icon-calendar">
+                                                {{ page.date | date_to_string}}
+                                            </div>
+					    {% if author %}
+                                            <div class="blog-post-details-item blog-post-details-item-left icon-user">
+                                              {{ author.name }}
+                                            </div>
+					    {% endif %}
+                                            <!-- //Author Name// -->
+					    {% if page.tags.size > 0 %}
+                                            <!-- Tags -->
+                                            <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags icon-files">
+					      s
+					      {% for tag in page.tags %}
+					        {{tag}}
+                                              
+					      {% endfor %}                                               
+                                            </div>
+                                            <!-- //Tags// -->
+					    {% endif %}
+
+                                            <!-- Comments -->
+					    {% if false %}
+                                            <div
+                                                class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last icon-comment">
+                                                <a href="">
+                                                    3 Comments
+                                                </a>
+                                            </div>
+					    {% endif %}
+                                            <!-- //Comments// -->
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- //Blog Post// -->
+
+                            </div>
+
+
+                            <div class="col-md-3 col-sm-3">
+                                <div class="sidebar">
+
+                                    <!-- Sidebar Block -->
+                                    <div class="sidebar-block">
+                                        <h3 class="h3-sidebar-title sidebar-title">
+                                            tags
+                                        </h3>
+
+                                        <div class="sidebar-content tags">
+					  {% if page.tags.size > 0 %}
+					  {% for tag in page.tags %}
+                                            <a href="">{{ tag }}</a>
+					  {% endfor %}
+					    {% else %}
+					    None
+					  {% endif %}
+                                        </div>
+                                    </div>
+                                    <!-- Sidebar Block -->
+
+
+                                    <!-- Sidebar Block -->
+                                    <div class="sidebar-block">
+                                        <h3 class="h3-sidebar-title sidebar-title">
+                                            recent posts
+                                        </h3>
+
+                                        <div class="sidebar-content">
+                                            <ul class="posts-list">
+					      {% for post in site.posts limit:4 %}
+                                                <li>
+                                                    <div class="posts-list-thumbnail">
+                                                        <a href="">
+                                                            <img src="images/placeholders/blog1-thumb.jpg" alt=""  class="img-responsive"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="posts-list-content">
+                                                        <a href="" class="posts-list-title">{{ post.title }}</a>
+                                                        <span class="posts-list-meta">
+                                                            {{ post.date | date_to_string }}
+                                                        </span>
+                                                    </div>
+                                                </li>
+						{% endfor %}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Sidebar Block -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--.content-wrapper end -->
+
+
+<!--  
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -12,4 +184,4 @@ layout: default
     {{ content }}
   </article>
 
-</div>
+-->
