@@ -46,7 +46,7 @@ root: ".."
 
                                     <div class="blog-span">
                                         <div class="blog-post-featured-img img-overlay">
-                                            <img src="images/placeholders/blog1.jpg" alt=""/>
+                                            <!--img src="images/placeholders/blog1.jpg" alt=""/-->
 
                                             <div class="item-img-overlay">
                                                 <a class="portfolio-zoom fa fa-plus" href="images/placeholders/blog1.jpg"
@@ -90,7 +90,6 @@ root: ".."
 					    {% if post.tags.size > 0 %}
                                             <!-- Tags -->
                                             <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags icon-files">
-					      s
 					      {% for tag in post.tags %}
 					        {{tag}}
                                               
@@ -187,12 +186,12 @@ root: ".."
                                             <ul class="posts-list">
 					      {% for post in site.posts limit:4 %}
                                                 <li>
-                                                    <div class="posts-list-thumbnail">
+                                                    <!--div class="posts-list-thumbnail">
                                                         <a href="">
                                                             <img src="images/placeholders/blog1-thumb.jpg" alt=""  class="img-responsive"/>
                                                         </a>
-                                                    </div>
-                                                    <div class="posts-list-content">
+                                                    </div-->
+                                                    <div>
                                                         <a href="" class="posts-list-title">{{ post.title }}</a>
                                                         <span class="posts-list-meta">
                                                             {{ post.date | date_to_string }}
