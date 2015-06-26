@@ -9,6 +9,7 @@ tags:
 
 #Hackathlon: a weekend well spent
 
+
 Not having attended a hackathlon before, I was torn. My summer weekends for me are usually fully booked with outdoorsy activities- however, spending a weekend with a bunch of other nerds, doing something we love powered by delicious Augustiner beer and Club Mate did sound pretty great.
 
 The 2015 Wearable Data Hack (http://wearabledatahack.com/ ) was, as the name says, focused on wearables. Mobile devs, designers and data guys joined together to hack away some cool wearable-focused ideas.
