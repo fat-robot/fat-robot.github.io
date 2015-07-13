@@ -37,6 +37,8 @@ root: ".."
 			 <div class="row">
 			   <div class="col-md-9 col-sm-9">
 			     {% for post in paginator.posts %}
+			     <!-- Look the author details up from the site config. -->
+			     {% assign author = site.data.authors[post.author] %}
 			     <!-- Blog Post -->
                                 <div class="blog-post">
 

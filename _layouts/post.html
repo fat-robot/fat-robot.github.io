@@ -3,6 +3,8 @@ layout: default
 ---
 
 {% include header.html %}
+<!-- Look the author details up from the site config. -->
+{% assign author = site.data.authors[page.author] %}
 
 <div class="top-title-wrapper">
   <div class="container">
@@ -17,7 +19,11 @@ layout: default
               <li>
                 <a href="{{ site.baseurl }}/index.html">Home</a>
               </li>
-              <li class="active">Blog</li>
+              <li class="active">
+		<a href="{{ site.baseurl }}/blog">
+		  Blog
+		</a>
+	      </li>
             </ol>
           </div>
           <!-- BreadCrumb -->
@@ -78,7 +84,9 @@ layout: default
                                             </div>
 					    {% if author %}
                                             <div class="blog-post-details-item blog-post-details-item-left icon-user">
+					      <a href="{{ author.gplus }}" target="_blank">
                                               {{ author.name }}
+					      </a>
                                             </div>
 					    {% endif %}
                                             <!-- //Author Name// -->
